@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>night</title>
+  <meta name="viewport" content="width=750px, user-scalable=no"/>
+  <meta >
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper{
+    position:relative;
+    background-color:#193d7e;
+    width:750px;
+    min-width: 750px;
+    height:100vh;
+    margin:0 auto;
+    overflow: hidden;
+    /* background: url(./image/bk.jpg);
+    background-size: contain; */
+
+  }
+  .wrapper .star{
+    position: absolute;
+    width:4px;
+    height:4px;
+    border-radius: 50%;
+    background-color:#fff;
+  }
+  .wrapper .star-no{
+    position: absolute;
+    width:4px;
+    height:4px;
+    border-radius: 50%;
+    background-color:rgba(255, 255, 255, 0.3);
+  }
+  .star1{
+    top:10px;
+    animation:twinkle 2.1s infinite;
+  }
+  .star2{
+    top:14px;
+    left:10px;
+    animation:twinkle 2.5s infinite;
+  }
+  .star3{
+    top:54px;
+    left:80px;
+    animation:twinkle 2.6s infinite;
+  }
+  .star4{
+    width:2px !important;
+    height:2px !important;
+    top:56px;
+    left:180px;
+    animation:twinkle 2.6s infinite;
+  }
+  .star5{
+    width:1px !important;
+    height:1px !important;
+    top:306px;
+    left:190px;
+    animation:twinkle 2.3s infinite;
+  }
+  .star6{
+    width:2px !important;
+    height:2px !important;
+    top:136px;
+    left:190px;
+    animation:twinkle 2.3s infinite;
+  }
+  .star7{
+    width:2px !important;
+    height:2px !important;
+    top:336px;
+    left:130px;
+    animation:twinkle 1.8s infinite;
+  }
+  .star8{
+    top:36px;
+    left:330px;
+    animation:twinkle 1.8s infinite;
+  }
+  .star9{
+    top:16px;
+    left:360px;
+    animation:twinkle 2.8s infinite;
+  }
+  .star10{
+    top:106px;
+    right:10px;
+    animation:twinkle 2.8s infinite;
+  }
+  .star11{
+    top:126px;
+    right:50px;
+    animation:twinkle 2.5s infinite;
+  }
+  .star12{
+    width:2px !important;
+    height:2px !important;
+    top:336px;
+    left:290px;
+    animation:twinkle 2.7s infinite;
+  }
+  .star13{
+    width:3px !important;
+    height:3px !important;
+    top:236px;
+    left:230px;
+    animation:twinkle 2.3s infinite;
+  }
+  .star14{
+    top:359px;
+    left:139px;
+    animation:twinkle 2.2s infinite;
+  }
+  .star15{
+    top:259px;
+    left:639px;
+    animation:twinkle 2.1s infinite;
+  }
+  .star16{
+    width:3px !important;
+    height:3px !important;
+    top:159px;
+    left:539px;
+    animation:twinkle 1.9s infinite;
+  }
+  .star17{
+    width:3px !important;
+    height:3px !important;
+    top:129px;
+    left:439px;
+    animation:twinkle 1.7s infinite;
+  }
+  .star18{
+    width:3px !important;
+    height:3px !important;
+    top:119px;
+    left:239px;
+    animation:twinkle 2.9s infinite;
+  }
+  .star19{
+    width:2px !important;
+    height:2px !important;
+    top:300px;
+    left:339px;
+    animation:twinkle 2.9s infinite;
+  }
+  .star20{
+    width:2px !important;
+    height:2px !important;
+    top:250px;
+    left:250px;
+    animation:twinkle 2.9s infinite;
+  }
+  .star21{
+    top:200px;
+    left:290px;
+    animation:twinkle 2.2s infinite;
+  }
+  .star22{
+    width:2px !important;
+    height:2px !important;
+    top:150px;
+    left:159px;
+    animation:twinkle 3s infinite;
+  }
+  .star23{
+    top:300px;
+    right:250px;
+    animation:twinkle 2.8s infinite;
+  }
+  .star24{
+    top:230px;
+    right:250px;
+    animation:twinkle 2.3s infinite;
+  }
+  .star25{
+    top:260px;
+    right:350px;
+    animation:twinkle 3.4s infinite;
+  }
+  .star26{
+    top:165px;
+    right:320px;
+    animation:twinkle 5s infinite;
+  }
+  .star27{
+    top:225px;
+    right:220px;
+    animation:twinkle 6s infinite;
+  }
+  .star28{
+    top:25px;
+    right:90px;
+    animation:twinkle 6s infinite;
+  }
+  .star29{
+    top:2px;
+    right:95px;
+    animation:twinkle 5s infinite;
+  }
+  .star30{
+    top:200px;
+    left:95px;
+    animation:twinkle 6s infinite;
+  }
+  .star31{
+    top:200px;
+    right:95px;
+    animation:twinkle 5.5s infinite;
+  }
+  .star32{
+    top:220px;
+    right:25px;
+    animation:twinkle 3s infinite;
+  }
+  .star33{
+    top:230px;
+    right:35px;
+    animation:twinkle 3.3s infinite;
+  }
+  .star34{
+    top:220px;
+    right:65px;
+    animation:twinkle 2.3s infinite;
+  }
+  .star35{
+    top:120px;
+    right:85px;
+    animation:twinkle 3.6s infinite;
+  }
+  .star36{
+    top:220px;
+    right:325px;
+    animation:twinkle 3.8s infinite;
+  }
+  .star37{
+    top:220px;
+    right:65px;
+    animation:twinkle 2s infinite;
+  }
+  .star38{
+    top:120px;
+    right:65px;
+    animation:twinkle 3.2s infinite;
+  }
+  .star39{
+    top:200px;
+    right:165px;
+    animation:twinkle 3s infinite;
+  }
+  .star40{
+    top:250px;
+    right:165px;
+    animation:twinkle 3s infinite;
+  }
+  .star41{
+    top:200px;
+    left:95px;
+    animation:twinkle 5.5s infinite;
+  }
+  .star42{
+    top:220px;
+    left:25px;
+    animation:twinkle 3s infinite;
+  }
+  .star43{
+    top:230px;
+    left:35px;
+    animation:twinkle 3.3s infinite;
+  }
+  .star44{
+    top:220px;
+    left:65px;
+    animation:twinkle 2.3s infinite;
+  }
+  .star45{
+    top:120px;
+    left:85px;
+    animation:twinkle 3.6s infinite;
+  }
+  .star46{
+    top:220px;
+    left:325px;
+    animation:twinkle 3.8s infinite;
+  }
+  .star47{
+    top:220px;
+    left:65px;
+    animation:twinkle 2s infinite;
+  }
+  .star48{
+    top:120px;
+    left:65px;
+    animation:twinkle 3.2s infinite;
+  }
+  .star49{
+    top:200px;
+    left:165px;
+    animation:twinkle 3s infinite;
+  }
+  .star50{
+    top:250px;
+    left:165px;
+    animation:twinkle 3s infinite;
+  }
+  .star-no1{
+    top:100px;
+    left:95px;
+  }
+  .star-no2{
+    width:1px !important;
+    height:1px !important;
+    top:130px;
+    left:195px;
+  }
+  .star-no3{
+    width:2px !important;
+    height:2px !important;
+    top:170px;
+    left:155px;
+  }
+  .star-no4{
+    width:3px !important;
+    height:3px !important;
+    top:120px;
+    left:195px;
+  }
+  .star-no5{
+    width:3px !important;
+    height:3px !important;
+    top:190px;
+    left:165px;
+  }
+  .star-no6{
+    width:3px !important;
+    height:3px !important;
+    top:200px;
+    left:175px;
+  }
+  .star-no7{
+    width:3px !important;
+    height:3px !important;
+    top:210px;
+    right:185px;
+  }
+  .star-no8{
+    width:3px !important;
+    height:3px !important;
+    top:110px;
+    right:25px;
+  }
+  .star-no9{
+    width:3px !important;
+    height:3px !important;
+    top:20px;
+    right:235px;
+  }
+  .star-no11{
+    width:3px !important;
+    height:3px !important;
+    top:200px;
+    right:135px;
+  }
+  .star-no12{
+    top:120px;
+    right:355px;
+  }
+  .star-no13{
+    top:120px;
+    right:55px;
+  }
+  .star-no14{
+    top:70px;
+    right:95px;
+  }
+  .star-no15{
+    top:200px;
+    right:95px;
+  }
+  .star-no16{
+    top:230px;
+    right:45px;
+  }
+  .star-no17{
+    top:240px;
+    right:55px;
+  }
+  .star-no18{
+    top:260px;
+    right:25px;
+  }
+  .shooting-star1{
+    position:absolute;
+    width: 120px;
+    height: 2px;
+    background: url(http://100dayscss.com/codepen/shooting-star.png) center center no-repeat;
+    background-size: 100% 100%;
+    transform: rotate(20deg);
+    top:-25px;
+    left:100px;
+    z-index:2;
+    animation: 21s falling-star 4s infinite
+  }
+  .shooting-star2{
+    position:absolute;
+    width: 120px;
+    height: 2px;
+    background: url(http://100dayscss.com/codepen/shooting-star.png) center center no-repeat;
+    background-size: 100% 100%;
+    transform: rotate(20deg);
+    top:-25px;
+    left:90px;
+    z-index:2;
+    animation: 24s falling-star 1s infinite
+  }
+  .shooting-star3{
+    position:absolute;
+    width: 120px;
+    height: 2px;
+    background: url(http://100dayscss.com/codepen/shooting-star.png) center center no-repeat;
+    background-size: 100% 100%;
+    transform: rotate(20deg);
+    top:-25px;
+    left:200px;
+    z-index:2;
+    animation: 19s falling-star 10s infinite
+  }
+  .shooting-star4{
+    position:absolute;
+    width: 120px;
+    height: 2px;
+    background: url(http://100dayscss.com/codepen/shooting-star.png) center center no-repeat;
+    background-size: 100% 100%;
+    transform: rotate(20deg);
+    top:-25px;
+    left:10px;
+    z-index:2;
+    animation: 14s falling-star 5s infinite
+  }
+  @keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+}
+  @keyframes falling-star {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(25deg);
+  }
+  25%, 100% {
+    transform: translate3d(750px, 750px, 0) rotate(45deg);
+  }
+}
+.sun{
+  top:30px;
+  right:150px;
+  position: absolute;
+  width:100px;
+  height:100px;
+  border-radius: 50%;
+  background-color:rgba(255, 255, 0, 0.7);
+  box-shadow: 0 0 100px #e7bb36;
+}
+.person{
+  position: absolute;
+  width:50%;
+  height:50%;
+  /* width:493px; */
+  /* height:670px; */
+  background: url(./image/bk.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom:0px;
+  right:-70px;
+}
+.cloud{
+  position: relative;
+  width:90px;
+  height:50px;
+  border-radius: 50%;
+  background-color:rgba(255, 255, 255, 0.8);
+  margin-left:30px;
+  left:-170px;
+  top:160px;
+  animation: 105s cloudeaction 1s   infinite linear;
+}
+.cloud::before{
+  content:'';
+  position:absolute;
+  width:40px;
+  height:30px;
+  border-radius: 50%;
+  left:-40px;
+  top:10px;
+  background-color:rgba(255, 255, 255, 0.7);
+}
+.cloud::after{
+  content:'';
+  position:absolute;
+  width:40px;
+  height:30px;
+  border-radius: 50%;
+  right:-35px;
+  top:0px;
+  background-color:rgba(255, 255, 255, 0.7);
+}
+.cloud2{
+  position: relative;
+  width:90px;
+  height:70px;
+  border-radius: 50%;
+  background-color:rgba(255, 255, 255, 0.8);
+  margin-left:30px;
+  left:-170px;
+  top:20px;
+  animation: 205s cloudeaction    infinite linear;
+}
+.cloud2::before{
+  content:'';
+  position:absolute;
+  width:40px;
+  height:30px;
+  border-radius: 50%;
+  left:-35px;
+  top:10px;
+  background-color:rgba(255, 255, 255, 0.7);
+}
+.cloud2::after{
+  content:'';
+  position:absolute;
+  width:50px;
+  height:40px;
+  border-radius: 50%;
+  right:-30px;
+  top:-20px;
+  background-color:rgba(255, 255, 255, 0.7);
+}
+@keyframes cloudeaction {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  25%, 100% {
+    transform: translate3d(950px, 0px, 0) ;
+  }
+}
+</style>
+<body>
+  <div class="wrapper">
+    <span class="person"></span>
+    <span class="sun"></span>
+     <span class="star star1"></span>
+     <span class="star star2"></span>
+     <span class="star star3"></span>
+     <span class="star star4"></span>
+     <span class="star star5"></span>
+     <span class="star star6"></span>
+     <span class="star star7"></span>
+     <span class="star star8"></span>
+     <span class="star star9"></span>
+     <span class="star star10"></span>
+     <span class="star star11"></span>
+     <span class="star star12"></span>
+     <span class="star star13"></span>
+     <span class="star star14"></span>
+     <span class="star star15"></span>
+     <span class="star star16"></span>
+     <span class="star star17"></span>
+     <span class="star star18"></span>
+     <span class="star star19"></span>
+     <span class="star star20"></span>
+     <span class="star star21"></span>
+     <span class="star star22"></span>
+     <span class="star star23"></span>
+     <span class="star star24"></span>
+     <span class="star star25"></span>
+     <span class="star star26"></span>
+     <span class="star star27"></span>
+     <span class="star star28"></span>
+     <span class="star star29"></span>
+     <span class="star star30"></span>
+     <span class="star star31"></span>
+     <span class="star star32"></span>
+     <span class="star star33"></span>
+     <span class="star star34"></span>
+     <span class="star star35"></span>
+     <span class="star star36"></span>
+     <span class="star star37"></span>
+     <span class="star star38"></span>
+     <span class="star star39"></span>
+     <span class="star star40"></span>
+     <span class="star star41"></span>
+     <span class="star star42"></span>
+     <span class="star star43"></span>
+     <span class="star star44"></span>
+     <span class="star star45"></span>
+     <span class="star star46"></span>
+     <span class="star star47"></span>
+     <span class="star star48"></span>
+     <span class="star star49"></span>
+     <span class="star star50"></span>
+     <span class="shooting-star1"></span>
+     <span class="shooting-star2"></span>
+     <span class="shooting-star3"></span>
+     <span class="shooting-star4"></span>
+     <span class="star-no star-no1"></span>
+     <span class="star-no star-no2"></span>
+     <span class="star-no star-no3"></span>
+     <span class="star-no star-no4"></span>
+     <span class="star-no star-no5"></span>
+     <span class="star-no star-no6"></span>
+     <span class="star-no star-no7"></span>
+     <span class="star-no star-no8"></span>
+     <span class="star-no star-no9"></span>
+     <span class="star-no star-no11"></span>
+     <span class="star-no star-no12"></span>
+     <span class="star-no star-no13"></span>
+     <span class="star-no star-no14"></span>
+     <span class="star-no star-no15"></span>
+     <span class="star-no star-no16"></span>
+     <span class="star-no star-no17"></span>
+     <span class="star-no star-no18"></span>
+     <div class="cloud"></div>
+     <div class="cloud2"></div>
+  </div>
+</body>
+</html>
